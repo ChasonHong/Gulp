@@ -15,21 +15,23 @@ http://nodejs.org
 然后点击大大的绿色的install按钮，下载完成后直接运行程序(一路next)，就一切准备就绪。[npm](https://www.npmjs.com/)随着安装包一起自动安装，稍后会用到它。
 
 <h3>第二步：使用命令行</h3>
-也许现在你还不是很了解什么是命令行（OSX中的终端Terminal，windows中的命令提示符Command Prompt），但很快你就会知道。它看起来没那么简单，但一旦掌握了它的窍门，就可以很方便的执行很多命令行程序，比如Sass，Yeoman和Git等，这些都是非常有用的工具。
+也许现在你还不是很了解什么是命令行（OSX中的终端Terminal，windows中的命令提示符Command Prompt），但很快你就会知道。它可能看起来没那么简单，但一旦掌握了它的窍门，就可以很方便的执行很多命令行程序，比如Sass，Yeoman和Git等，这些都是非常有用的工具。
 
-> 如果你很熟悉命令行，直接跳到步骤四。
+> 如果你很熟悉命令行，那么直接跳到步骤四。
 
 为了确保Node已经正确安装，我们执行几个简单的命令。
 
 ```html
 node -v
 ```
-回车（Enter），如果正确安装的话，你会看到所安装的Node的版本号，接下来看看npm。
+回车（Enter），如果正确安装的话，你会看到所安装的Node的版本号。
+
+接下来看看npm。
 
 ```html
 npm -v
 ```
-这同样能得到npm的版本号。
+同样这应该返回npm的版本号。
 
 如果这两行命令没有得到返回，可能node就没有安装正确，尝试重启下命令行工具，如果还不行的话，只能回到第一步进行重装。
 
@@ -39,8 +41,9 @@ npm -v
 1. cd，定位到目录
 2. ls，列出文件列表
 
-> 建议多敲敲这两个命令，了解文件系统并知道文件都在哪里
-> 习惯使用了这两个命令后，就要进入我们的项目目录，这个目录各不相同，举个例子，这是我进入我项目目录的命令：
+> 建议多花些时间玩这些命令，了解文件系统并知道文件都在哪里
+
+习惯使用了这两个命令后，就要进入我们的项目目录，这对每个人都可能是不同的，举个例子，这是我想为我的本地项目定位的命令：
 
 ```html
 cd /Applications/XAMPP/xamppfiles/htdocs/my-project
@@ -48,7 +51,7 @@ cd /Applications/XAMPP/xamppfiles/htdocs/my-project
 成功进入项目目录后，我们开始安装gulp。
 
 <h3>第四步：安装gulp</h3>
-我们已经知道如何使用命令行，现在尝试点新的东西，认识npm然后安装gulp。
+我们已经知道如何使用命令行，也知道我们的文件系统，现在尝试点新的东西，认识npm然后安装gulp。
 
 NPM是基于命令行的node包管理工具，它可以将node的程序模块安装到项目中，在它的官网中可以查看和搜索所有可用的程序模块。
 
@@ -56,19 +59,19 @@ NPM是基于命令行的node包管理工具，它可以将node的程序模块安
 ```html
 sudo npm install -g gulp 
 ```
-1. sudo是以管理员身份执行命令，一般会要求输入电脑密码
-2. npm是安装node模块的工具，执行install命令
+让我们快速分解这一现象：
 
-3. -g表示在全局环境安装，以便任何项目都能使用它
-
-4. 最后，gulp是将要安装的node模块的名字
+1. sudo是以管理员身份执行命令，一般会要求输入电脑密码。
+2. npm是安装node模块的工具，执行install命令。
+3. -g表示在全局环境安装，以便任何项目都能使用它。
+4. 最后，gulp是将要安装的node模块的名字。
 
 运行时注意查看命令行有没有错误信息，安装完成后，你可以使用下面的命令查看gulp的版本号以确保gulp已经被正确安装。
 
 ```html
 gulp -v
 ```
-接下来，我们需要将gulp安装到项目本地
+接下来，我们需要将gulp安装到项目本地。
 ```html
 npm install --save-dev gulp
 ```
@@ -76,26 +79,30 @@ npm install --save-dev gulp
 
 Dependencies可以向其他参与项目的人指明项目在开发环境和生产环境中的node模块依懒关系，想要更加深入的了解它可以看看package.json文档。
 
-<h3>第五步：新建Gulpfile文件，运行gulp</h3>
+现在,gulp安装完成了，下一步是我们要设置gulpfile文件。我们几乎完成了!
+
+<h3>第五步：创建Gulpfile文件和运行gulp</h3>
 
 安装好gulp后我们需要告诉它要为我们执行哪些任务，首先，我们自己需要弄清楚项目需要哪些任务。
 
-检查Javascript
-编译Sass（或Less之类的）文件
-合并Javascript
-压缩并重命名合并后的Javascript
+* 检查Javascript
+* 编译Sass（或Less之类的）文件
+* 合并Javascript
+* 压缩并重命名合并后的Javascript
 
-<h5>安装依赖</h5>
+<h5>安装插件</h5>
 
 ```html
 npm install gulp-jshint gulp-sass gulp-concat gulp-uglify gulp-rename --save-dev 
 ```
 > 提醒下，如果以上命令提示权限错误，需要添加sudo再次尝试。
 
-<h5>新建gulpfile文件</h5>
-现在，组件都安装完毕，我们需要新建gulpfile文件以指定gulp需要为我们完成什么任务。
+<h5>创建gulpfile文件</h5>
+现在，组件都安装完毕，我们需要创建gulpfile文件以指示gulp需要为我们完成什么任务。
 
-gulp只有五个方法： task，run，watch，src，和dest，在项目根目录新建一个js文件并命名为gulpfile.js，把下面的代码粘贴进去：
+gulp只有五个方法： task，run，watch，src，和dest。
+
+在项目根目录创建一个js文件并命名为gulpfile.js，把下面的代码粘贴进去：
 
 <h6>gulpfile.js</h6>
 ```javascript
@@ -156,7 +163,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 ```
 
-这一步，我们引入了核心的gulp和其他依赖组件，接下来，分开创建lint, sass, scripts 和 default这四个不同的任务。
+这一步，我们引入了核心的gulp和其他依赖组件，接下来，设置单独的任务，分开创建lint, sass, scripts 和 default这四个不同的任务。
 
 <h5>Lint任务</h5>
 ```javascript
