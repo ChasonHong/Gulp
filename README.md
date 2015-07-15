@@ -12,10 +12,10 @@
 首先，最基本也最重要的是，我们需要搭建node环境。访问
 http://nodejs.org
 [](http://nodejs.org)
-然后点击大大的绿色的install按钮，下载完成后直接运行程序(一路next)，就一切准备就绪。[npm](https://www.npmjs.com/)随着安装包一起自动安装，稍后会用到它。
+然后点击大大的绿色的“install”按钮，下载完成后直接运行程序(一路next)，就一切准备就绪。[npm](https://www.npmjs.com/)随着安装包一起自动安装，稍后会用到它。
 
 <h3>第二步：使用命令行</h3>
-也许现在你还不是很了解什么是命令行（OSX中的终端Terminal，windows中的命令提示符Command Prompt），但很快你就会知道。它可能看起来没那么简单，但一旦掌握了它的窍门，就可以很方便的执行很多命令行程序，比如Sass，Yeoman和Git等，这些都是非常有用的工具。
+也许现在你还不是很了解什么是命令行（OSX中的终端是Terminal，windows中的是命令提示符Command Prompt），但很快你就会知道。它可能看起来没那么简单，但一旦掌握了它的窍门，就可以很方便的执行很多命令行程序，比如Sass，Yeoman和Git等，这些都是非常有用的工具。
 
 > 如果你很熟悉命令行，那么直接跳到步骤四。
 
@@ -53,7 +53,7 @@ cd /Applications/XAMPP/xamppfiles/htdocs/my-project
 <h3>第四步：安装gulp</h3>
 我们已经知道如何使用命令行，也知道我们的文件系统，现在尝试点新的东西，认识npm然后安装gulp。
 
-NPM是基于命令行的node包管理工具，它可以将node的程序模块安装到项目中，在它的官网中可以查看和搜索所有可用的程序模块。
+NPM（node package manager）是基于命令行的node包管理器，用于node插件管理（包括安装、卸载、管理依赖等）；它可以将node的程序模块安装到项目中，在它的官网中可以查看和搜索所有可用的程序模块。
 
 在命令行中输入
 ```html
