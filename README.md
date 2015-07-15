@@ -72,7 +72,7 @@ gulp -v
 ```html
 npm install --save-dev gulp
 ```
-这里，我们使用--save-dev意思就是，把 Gulp 作为项目的开发依赖,来更新package.json文件，更新devDependencies值，以表明项目需要依赖gulp。
+这里，我们使用--save-dev意思就是，把 Gulp 作为项目的开发依赖，来更新package.json文件，更新devDependencies值，以表明项目需要依赖gulp。
 
 Dependencies可以向其他参与项目的人指明项目在开发环境和生产环境中的node模块依懒关系，想要更加深入的了解它可以看看package.json文档。
 
