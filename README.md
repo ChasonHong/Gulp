@@ -55,7 +55,7 @@ cd /Applications/XAMPP/xamppfiles/htdocs/my-project
 
 NPM（node package manager）是基于命令行的node包管理器，用于node插件管理（包括安装、卸载、管理依赖等）；它可以将node的程序模块安装到项目中，在它的官网中可以查看和搜索所有可用的程序模块。
 
-在命令行中输入
+全局安装gulp，在命令行中输入
 ```html
 sudo npm install -g gulp 
 ```
@@ -71,7 +71,7 @@ sudo npm install -g gulp
 ```html
 gulp -v
 ```
-接下来，我们需要将gulp安装到项目本地。
+接下来，我们还需要在本地项目中安装gulp。
 ```html
 npm install --save-dev gulp
 ```
