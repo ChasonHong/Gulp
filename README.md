@@ -1,4 +1,4 @@
-# Getting Started with Gulp
+# Getting Started with Gulp -- gulp入门教程
 <p align="center">
   <a href="http://gulpjs.com.cn">
     <img height="257" width="114" src="https://github.com/ChasonHong/Gulp/blob/master/gulp.png" title="gulp中文网版本1">
