@@ -1,7 +1,7 @@
 # Getting Started with Gulp
 <p align="center">
   <a href="http://gulpjs.com.cn">
-    <img height="257" width="114" src="https://github.com/ChasonHong/Gulp/blob/master/gulp.png">
+    <img height="257" width="114" src="https://github.com/ChasonHong/Gulp/blob/master/gulp.png" title="gulp中文网版本1">
   </a>
 </p>
 ### Grunt靠边，全新的自动化构建工具来了。
@@ -235,6 +235,7 @@ gulp sass
 
 1. [npm上得gulp组件](https://www.npmjs.com/search?q=gulpplugin)
 2. [gulp的Github主页](https://github.com/gulpjs/gulp)
+3. [gulp中文网版本2](http://gulps.net/)
 
 本文译自https://travismaynard.com/writing/getting-started-with-gulp
 
