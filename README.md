@@ -236,6 +236,7 @@ gulp sass
 1. [npm上得gulp组件](https://www.npmjs.com/search?q=gulpplugin)
 2. [gulp的Github主页](https://github.com/gulpjs/gulp)
 3. [gulp中文网版本2](http://gulps.net/)
+4. [另一篇:gulp详细入门教程](http://www.ydcss.com/archives/18)
 
 本文译自https://travismaynard.com/writing/getting-started-with-gulp
 
