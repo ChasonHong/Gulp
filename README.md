@@ -71,7 +71,7 @@ sudo npm install -g gulp
 ```html
 gulp -v
 ```
-接下来，我们还需要在本地项目中安装gulp。
+接下来，我们还需要在本地项目中安装gulp(执行下面指令请先创建package.json文件)。
 ```html
 npm install --save-dev gulp
 ```
